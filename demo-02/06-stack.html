@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层叠(效果叠加)</title>
+    <style media="screen">
+    /*
+    对一个元素不同样式的多次设置会进行效果叠加，
+    同一样式会覆盖
+    */
+    .one {
+      font-size: 50px;
+    }
+    .one , .two {
+      color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- p-1标签50px;red -->
+    <p class="one">p-1标签</p>
+    <!-- p-2标签red; -->
+    <p class="two">p-2标签</p>
+  </body>
+</html>

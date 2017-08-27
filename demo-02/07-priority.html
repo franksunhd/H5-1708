@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS的优先级问题　重点！！！</title>
+    <style media="screen">
+    #oneId {
+      color: green;
+    }
+
+    .one {
+      color:red;
+    }
+
+    p {
+      /*
+      !important 用于确定最高优先级
+      */
+      color: yellow !important;
+    }
+
+    .two {
+      color: purple;
+    }
+
+    #twoId {
+      color: pink;
+    }
+    /**/
+    .three-1 {
+      color: red;
+    }
+    /* 交集选择器*/
+    div.three-1 {
+      color: yellow;
+    }
+    /*后代选择器*/
+    div .three-2 {
+      color:green;
+    }
+    </style>
+  </head>
+  <body>
+    <!--
+    css的选择器规则，是按照从右到左寻找的！！！！！
+   -->
+    <!--
+    优先级的计算公式(在元素本身上)：
+    !important > 行内style > id > class > 标签 > 继承 > 浏览器的默认
+    计算公式：在同一个css的规则中,默认优先级为0
+     出现一次 标签，优先级加 1
+     出现一次 class，优先级加 10
+     出现一次 id ,优先级加 100
+    优先级相同，最后的设置有效
+    -->
+
+    <div class="one" id="oneId">
+        <!-- id > class 文本１为 #oneId的颜色-->
+      文本１
+      <!--
+          虽然有继承，但是它小于下面的其他类，故不考虑
+      -->
+      <p class="two" id="twoId"  style="color:brown;">请问p元素是什么颜色？？？</p>
+    </div>
+
+    <!--
+        three-1:出现一次类选择器+10;交集选择器出现一次div标签+1;所以是１１；
+        three-2:位于后代选择器，前边的div是标签+1;后边是类选择器+10;
+        两个优先级相同，最后设置有效;
+    -->
+    <div><!--div .three-2 中的div 指的是这一行的div-->
+      <div class="three-1 three-2">div的颜色？？？</div>
+    </div>
+    <div>
+      <h1 class="three-2">pppp</h1>
+    </div>
+  </body>
+</html>

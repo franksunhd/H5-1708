@@ -1,0 +1,517 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f6f6f6;
+}
+
+a {
+  color: #999999;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+ul li {
+  list-style: none;
+}
+
+.w {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.J-event {
+  background-color: #190400;
+}
+
+.J-event .J-event-bg {
+  height: 80px;
+  background: url("../images/head-bg.jpg") no-repeat;
+}
+
+.shortcut {
+  height: 28px;
+  border-bottom: 1px solid #ddd;
+  background-color: #e3e4e5;
+}
+
+.fl {
+  float: left;
+}
+
+.fl .bg {
+  margin-left: 200px;
+  padding-left: 7px;
+  width: 80px;
+  height: 28px;
+  color: #999999;
+  font-size: 12px;
+  text-indent: 2em;
+  line-height: 28px;
+  background: url(../images/bj-bg.png) no-repeat 14px 2px;
+  background-size: 15px 20px;
+}
+
+.rl {
+  width: 720px;
+  height: 28px;
+  float: right;
+  text-align: center;
+}
+
+.rl ul {
+  width: 722px;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 6px;
+}
+
+.rl ul li {
+  width: 79px;
+  float: left;
+  border-right: 1px solid #999999;
+}
+
+.rl ul li a {
+  font-size: 12px;
+}
+
+.head {
+  font-size: 12px;
+  height: 142px;
+  position: relative;
+  background: url("../images/erweima.png") no-repeat top right;
+}
+
+.head .logo {
+  float: left;
+  width: 190px;
+  height: 170px;
+  background: url("../images/logo.jpg") no-repeat;
+  background-size: 190px 170px;
+  position: absolute;
+  top: -29px;
+}
+
+.head .erweima {
+  width: 60px;
+  height: 60px;
+}
+
+.head .search {
+  width: 800px;
+  height: 53px;
+  float: left;
+  margin-top: -27px;
+  margin-left: 300px;
+}
+
+.head .search .search-box {
+  width: 495px;
+  height: 30px;
+  float: left;
+  border: 1px solid red;
+  color: #999999;
+  line-height: 30px;
+  padding-left: 5px;
+  background: url("../images/xiangji.png") no-repeat right center;
+}
+
+.head .search .search-btn {
+  width: 56px;
+  height: 30px;
+  float: left;
+  background-color: red;
+  text-align: center;
+  line-height: 32px;
+  padding-top: 2px;
+}
+
+.head .search .carbox {
+  border: 1px solid #999999;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  width: 168px;
+  height: 30px;
+  margin-left: 56px;
+  position: relative;
+}
+
+.head .search .carbox .car {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url("../images/car.png") no-repeat;
+  left: 20px;
+  top: 2px;
+}
+
+.head .search .carbox .zero {
+  width: 22px;
+  height: 18px;
+  background: url("../images/0.png") no-repeat;
+  position: absolute;
+  left: 120px;
+  top: 1px;
+}
+
+.head .search .search-nav ul {
+  width: 502px;
+  height: 20px;
+  float: left;
+}
+
+.head .search .search-nav ul li {
+  width: 65px;
+  float: left;
+  text-align: center;
+}
+
+.head .nav {
+  width: 996px;
+  height: 40px;
+  margin-left: 195px;
+  margin-top: 40px;
+}
+
+.head .nav .left {
+  font-size: 14px;
+  color: #555;
+  font-weight: bolder;
+  width: 800px;
+  float: left;
+  height: 20px;
+  margin-top: 19px;
+}
+
+.head .nav .right {
+  float: right;
+  width: 190px;
+  height: 40px;
+  background: url("../images/navbg.jpg") no-repeat;
+}
+
+.head .nav .left ul {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.head .nav .left ul li {
+  float: left;
+  width: 80px;
+  text-align: inherit;
+}
+
+.centent {
+  height: 500px;
+  width: 1190px;
+  margin-top: 10px;
+}
+
+.centent .leftnav, .centent .centernav, .centent .rightnav {
+  height: 500px;
+  float: left;
+}
+
+.centent .leftnav {
+  width: 190px;
+  background: #6e6568;
+}
+
+.centent .leftnav ul {
+  font-size: 14px;
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 20px;
+  padding-left: 16px;
+  color: white;
+}
+
+.centent .leftnav ul a {
+  color: white;
+}
+
+.centent .leftnav ul a:hover {
+  color: #d00414;
+}
+
+.centent .centernav {
+  width: 790px;
+  margin-left: 10px;
+}
+
+.centent .centernav .top {
+  width: 790px;
+  height: 340px;
+  float: left;
+  background: url("../images/bg.jpg") no-repeat center center;
+}
+
+.centent .centernav .left, .centent .centernav .right {
+  width: 390px;
+  height: 150px;
+  float: left;
+  margin-top: 10px;
+}
+
+.centent .centernav .left {
+  background: url("../images/left.jpeg") no-repeat;
+  background-size: 390px 150px;
+}
+
+.centent .centernav .right {
+  margin-left: 10px;
+  background: url("../images/right.jpeg") no-repeat;
+  background-size: 390px 150px;
+}
+
+.centent .rightnav {
+  width: 190px;
+  margin-left: 10px;
+  background: white;
+}
+
+.centent .rightnav .one {
+  height: 130px;
+  background: url("../images/touxiang.png") no-repeat;
+  margin: 10px 0px 0px 20px;
+}
+
+.centent .rightnav .one .onetop {
+  height: 70px;
+  font-size: 14px;
+  float: left;
+  color: #999999;
+  margin-left: 65px;
+  margin-top: 10px;
+}
+
+.centent .rightnav .one .oneleft, .centent .rightnav .one .oneright {
+  width: 60px;
+  height: 25px;
+  float: left;
+  margin-left: 10px;
+  color: #d00414;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border: 2px solid #d00414;
+}
+
+.centent .rightnav .one .oneleft:hover, .centent .rightnav .one .oneright:hover {
+  width: 60px;
+  height: 25px;
+  float: left;
+  margin-left: 10px;
+  color: white;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  background: #d00414;
+  border: 2px solid #d00414;
+}
+
+.centent .rightnav .two {
+  height: 30px;
+  color: #555555;
+  font-size: 14px;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  line-height: 30px;
+}
+
+.centent .rightnav .two ul {
+  float: left;
+  margin-left: 20px;
+}
+
+.centent .rightnav .two ul li {
+  width: 30px;
+  text-align: center;
+  float: left;
+}
+
+.centent .rightnav .two a {
+  float: right;
+  margin-right: 10px;
+}
+
+.centent .rightnav .three {
+  height: 150px;
+  font-size: 14px;
+  color: red;
+}
+
+.centent .rightnav .three ul {
+  float: left;
+  margin-left: 13px;
+  margin-top: 22px;
+}
+
+.centent .rightnav .three ul li {
+  height: 30px;
+}
+
+.centent .rightnav .four {
+  height: 180px;
+  font-size: 14px;
+}
+
+.centent .rightnav .four a {
+  height: 20px;
+  width: 47px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+table tr td {
+  width: 47px;
+  height: 58px;
+  border: 1px solid rgba(200, 213, 209, 0.5);
+  text-align: center;
+  position: relative;
+}
+
+.aa, .bb, .cc, .dd, .ee, .ff, .gg, .hh, .ii, .jj, .kk, .ll {
+  width: 26px;
+  height: 26px;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+
+.aa {
+  background: url("../images/sprite.png") no-repeat 0px 0px;
+}
+
+.bb {
+  background: url("../images/sprite.png") no-repeat -42px 0px;
+}
+
+.cc {
+  background: url("../images/sprite.png") no-repeat -87px 0px;
+}
+
+.dd {
+  background: url("../images/sprite.png") no-repeat -132px 0px;
+}
+
+.ee {
+  background: url("../images/sprite.png") no-repeat 1px -44px;
+}
+
+.ff {
+  background: url("../images/sprite.png") no-repeat -43px -43px;
+}
+
+.gg {
+  background: url("../images/sprite.png") no-repeat -87px -42px;
+}
+
+.hh {
+  background: url("../images/sprite.png") no-repeat -130px -43px;
+}
+
+.qiang {
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  left: 31px;
+  top: -1px;
+  background: url("../images/qiang.png") no-repeat;
+  background-size: 15px 19px;
+}
+
+.ii {
+  background: url("../images/sprite.png") no-repeat 1px -86px;
+}
+
+.jj {
+  background: url("../images/sprite.png") no-repeat -42px -86px;
+}
+
+.kk {
+  background: url("../images/sprite.png") no-repeat -87px -86px;
+}
+
+.ll {
+  background: url("../images/sprite.png") no-repeat -131px -86px;
+}
+
+.scrollbox {
+  width: 790px;
+  height: 340px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+.scroll {
+  overflow: hidden;
+  zoom: 1;
+  width: 10000px;
+}
+
+.scroll li {
+  position: absolute;
+  top: 0;
+  left: 790px;
+  width: 790px;
+  height: 288px;
+}
+
+.scroll li img {
+  width: 790px;
+  height: 340px;
+}
+
+.scroll li.cur {
+  left: 0;
+}
+
+.num {
+  overflow: hidden;
+  zoom: 1;
+  position: absolute;
+  bottom: 10px;
+  right: 340px;
+}
+
+.num li {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #CCC;
+  color: #000;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer
+}
+
+.num li.cur {
+  background-color: #C00;
+  color: #FFF;
+}

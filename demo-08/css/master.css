@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.w {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.file {
+  height: 300px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.file h1 {
+  font-size: 20px;
+  color: #1E88C7;
+}
+
+.file_s {
+  width: 120px;
+  height: 40px;
+  margin: 30px auto;
+  border-radius: 2px;
+  color: #1E88C7;
+  background: #D0EEFF;
+  border: 1px solid #99D3F5;
+  position: relative;
+}
+
+.file_s input {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  /*设置透明度为０，即不显示*/
+  opacity: 0;
+}
+
+.file_s:hover {
+  background: #AADFFD;
+  border-color: #78C3F3;
+  color: #004974;
+}
+
+.file_s p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}

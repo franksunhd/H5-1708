@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格添加/删除</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="w">
+      <div class="btn">
+        <button type="button" name="button">添加数据</button>
+        <button type="button" name="button">清空数据</button>
+      </div>
+      <table class="list">
+        <caption><h1>学生信息</h1></caption>
+        <thead>
+          <tr>
+            <th>ID号</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>REMARK</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    var add = $(".btn button").eq(0);
+    var clear =  $(".btn button").eq(1);
+    // var del = $(".list tbody tr td:last");
+    var trr;
+    var age = 18;
+    add.click(function(){
+      trr = "<tr><td>"+ age +"</td><td>张三</td></td><td>" + age + "</td><td>女</td><td><button>删除</button></td></tr>";
+      age++;
+      $(".list tbody").append(trr);
+
+      $(".list tbody td:last button").click(function(){
+        $(".list tbody tr td:last").parent().remove();
+      });
+    });
+
+
+
+    clear.click(function(){
+      $(".list tbody").empty();
+    });
+    </script>
+  </body>
+</html>

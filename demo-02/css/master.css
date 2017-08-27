@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.first-div {
+  width: 600px;
+  padding-left: 400px;
+}
+first-div h1 {
+  text-align: center;
+}
+first-div p {
+  text-indent: 2em;
+}

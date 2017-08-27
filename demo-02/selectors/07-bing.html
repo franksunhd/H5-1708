@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>并集选择器</title>
+    <style media="screen">
+    /*
+    并集以“,”作为分隔符
+    */
+    p,div{
+      color: red;
+    }
+
+    h3 span , h2 span {
+      color: green;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- p标签和div标签都为红色 -->
+    <p>p标签</p>
+    <div>div标签</div>
+
+    <!-- 下面两个都为绿色 -->
+    <h3><span>h3>span</span></h3>
+    <h2><span>h2>span</span></h2>
+  </body>
+</html>
