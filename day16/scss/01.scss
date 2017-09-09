@@ -1,0 +1,23 @@
+
+$bigFont: 100px;
+$color: yellow;
+
+@import "master.css";
+
+.one {
+  font-size: $bigFont;
+  color: $color;
+}
+
+.two{
+  color: $color;
+  font-size: $bigFont;
+}
+
+
+.three {
+  background: red;
+  &:hover {
+    background: blue;
+  }
+}
