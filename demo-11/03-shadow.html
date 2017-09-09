@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>text-shadow</title>
+    <style media="screen">
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .one {
+        width: 500px;
+        height: 500px;
+        margin: 200px;
+        background: gray;
+        font-size: 100px;
+        float: left;
+        text-align: center;
+        color: #808080;
+      }
+      .one > #first{
+        height: 250px;
+        line-height: 250px;
+        /*凹的文字*/
+        text-shadow: -1px -1px 1px #000, 1px 1px 1px #FFF;
+      }
+
+      .one > #second {
+        height: 250px;
+        line-height: 250px;
+        /*凸的文字*/
+        text-shadow: 1px 1px 1px #000, -1px -1px 1px #FFF;
+      }
+      .two {
+        width: 500px;
+        height: 500px;
+        margin: 200px -150px;
+        background: gray;
+        float: left;
+        text-align: center;
+        text-shadow: -10px -10px 10px red, 10px 10px 10px green;
+      }
+
+      .two > p {
+        width: 500px;
+        height: 150px;
+        line-height: 150px;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <p id="first">凹的文字</p>
+      <p id="second">凸的文字</p>
+    </div>
+    <div class="two">
+      <p id="first">first p</p>
+      <p id="second">second p</p>
+      <p id="third">third p</p>
+    </div>
+  </body>
+</html>

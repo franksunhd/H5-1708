@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.w {
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.main {
+  text-align: center;
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+}
+
+.stu {
+  margin: 50px auto;
+  border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+.stu th,
+.stu td {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  border: 1px solid gray;
+}

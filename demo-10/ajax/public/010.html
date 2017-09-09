@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="main w">
+      <h1>注册</h1>
+      <div class="mainbox">
+        <form action="#" method="post">
+          <ul>
+            <li class="item">
+              用户名:
+            </li>
+            <li>
+              <input type="text" name="username">
+              <span>您的账户名和登录名</span>
+            </li>
+            <li class="item">
+              登录密码:
+            </li>
+            <li>
+              <input type="password" name="passwd">
+              <span id="show-tip">建议至少使用两种字符组合</span>
+            </li>
+            <li class="item">
+              确认密码:
+            </li>
+            <li>
+              <input type="password" name="Autopasswd">
+              <span id="show-tip">请再次输入密码</span>
+            </li>
+            <li class="item">
+              手机号码:
+            </li>
+            <li>
+              <input type="text" name="phone">
+              <span id="show-tip">建议使用常用手机</span>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $(function(){
+      var oldValue;
+      var text;
+      var test;
+      var xhr = new XMLHttpRequest();
+
+      //文本类型
+      $("input:text").focus(function(){
+        oldValue = $(this).val();
+        if(oldValue==this.defaultValue)
+        {
+          $(this).val("");
+        }
+
+        // 失去焦点
+        $("input:text").blur(function(){
+          text = $(this).val();
+          if(!text){
+            // 为空
+            $(this).val(this.defaultValue);
+          }
+        });
+
+        $('[name=username]').change(function(){
+          //2 open()
+          xhr.open("post","http://127.0.0.1:8000/table",true);
+
+          //4
+          xhr.onreadystatechange = function(){
+            if (xhr.readyState === 4){
+              if ((xhr.status >= 200) && (xhr.status < 400)){
+                var data = JSON.parse(xhr.response);
+                var stus = data.stus;
+                // console.log(test);
+
+
+                for (var i = 0; i < stus.length; i++) {
+                  // console.log(stus[i].name);
+                  // console.log("111");
+                  if(test == stus[i].name){
+                    alert("注册了");
+                  }
+                  else{
+                    alert("没注册");
+                    break;
+                  }
+
+                }
+              } else {
+
+              }
+            }
+          }
+          //3 send()
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          test = $('[name=username]').val();
+          xhr.send(test);
+
+        });
+      });
+      //密码类型　的获得焦点的文本框,先把　密码类型　转换为　文本类型
+      $("input:password").attr("type","text").focus(function(){
+        // console.log("触发了");
+        $(this).attr("type","password");
+        oldValue = $(this).val();
+        if(oldValue==this.defaultValue)
+        {
+          $(this).val("");
+        }
+        // $(this).parent().next().css("visibility","visible");
+        // 失去焦点
+        $(this).blur(function(){
+          var text=$(this).val();
+          if(text=="请输入密码"){
+            $(this).val(this.defaultValue).attr("type","text");
+          }
+        });
+      });
+
+    });
+    </script>
+  </body>
+</html>

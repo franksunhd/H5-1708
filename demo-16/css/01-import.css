@@ -1,0 +1,15 @@
+/*
+  css import
+*/
+@import url(style.css);
+body {
+  background-color: #eee; }
+
+p {
+  font-size: 50px;
+  color: green; }
+
+.two {
+  background: red; }
+
+/*# sourceMappingURL=01-import.css.map */

@@ -1,0 +1,25 @@
+
+//@mixin
+
+@mixin checkbox() {
+  color: red;
+  text-align: center;
+}
+
+@mixin hehe($sizes:10px,$Color:blue) {
+  font-size: $sizes;
+  background-color: $Color;
+}
+
+.one {
+  @include checkbox;
+  @include hehe(20px,green);
+}
+
+@mixin shadow($value...) {
+  box-shadow: $value;
+}
+
+.two{
+  @include shadow(1px 2px 3px red,2px 3px 4px green);
+}

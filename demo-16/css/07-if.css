@@ -1,0 +1,33 @@
+.one-1 {
+  color: red;
+  font-size: 12px; }
+
+.one-2 {
+  color: green;
+  background: blue; }
+
+.one-3 {
+  display: block;
+  width: 100px; }
+
+.one-4 {
+  width: 20px;
+  height: 300px;
+  line-height: 20px; }
+
+.one-5 {
+  color: orange; }
+
+.two-m1 {
+  color: red; }
+
+.two-m2 {
+  color: green; }
+
+.two-m3 {
+  color: pink; }
+
+.two-m4 {
+  color: purple; }
+
+/*# sourceMappingURL=07-if.css.map */

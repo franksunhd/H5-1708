@@ -1,0 +1,23 @@
+.one1 {
+  font-size: 10px; }
+  .one1:hover {
+    background: orange; }
+  .one1 a {
+    text-decoration: none;
+    color: red; }
+    .one1 a:hover {
+      color: green; }
+  .one1 .one1_1 {
+    padding: 0; }
+
+.main {
+  border-style: double;
+  border-top-color: green;
+  border-left: 12px; }
+
+.fakeshadow {
+  border-style: solid;
+  border-left-color: #888;
+  border-right-color: #ccc; }
+
+/*# sourceMappingURL=03-selector.css.map */

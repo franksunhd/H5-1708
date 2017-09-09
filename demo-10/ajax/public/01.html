@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>测试get方法</title>
+  </head>
+  <body>
+    <button id="start" type="button" name="button">测试Ajax</button>
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+
+      // 兼容低版本ie浏览器的代码,对于现代浏览器可以省略部分代码
+      function createXHR(){
+        if (typeof XMLHttpRequest != "undefined"){
+          return new XMLHttpRequest();
+        } else if (typeof ActiveXObject != "undefined"){
+          if (typeof arguments.callee.activeXString != "string"){
+            var versions = [ "MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0",
+            "MSXML2.XMLHttp"], i, len;
+            for (i=0,len=versions.length; i < len; i++){
+              try {
+                new ActiveXObject(versions[i]);
+                arguments.callee.activeXString = versions[i];
+                break;
+              } catch (ex){
+                //跳过
+              }
+            }
+          }
+          return new ActiveXObject(arguments.callee.activeXString);
+        } else {
+          throw new Error("No XHR object available.");
+        }
+      }
+      $("#start").click(function(){
+        // 1.创建ＸＭＬ对象
+        // var xhr = createXHR();
+
+        //高版本浏览器
+        var xhr = new XMLHttpRequest();
+
+        //2.准备发送一个请求 open()
+        xhr.open("get","http://127.0.0.1:8000/index?name=ssy&age=23&score=100",true);
+
+
+        //４.时刻准备接收服务端的响应
+        xhr.onreadystatechange = function(){
+
+          //打印状态的变化
+          // console.log("当前状态为:" + xhr.readyState);
+          /*
+            0 open()方法未调用
+            1 send()方法未调用
+            2 send()方法已经被调用
+            3 响应体下载中;
+            4 整个请求过程已经完毕.
+          */
+          if(xhr.readyState === 4){
+            if((xhr.status>=200)&&(xhr.status<400)){
+
+              //通过xhr.response得到后端发送来的数据
+              console.log("recv of server:", xhr.response);
+
+
+              $("<h1>success</h1>").appendTo("body");
+            }else {
+              $("<h1>fail</h1>").appendTo("body");
+            }
+          }
+        };
+        //3.真正发送一个请求　send()
+        //get方法在send中不用再写
+        xhr.send();
+        $("<h1>send完毕!</h1>").appendTo("body");
+      });
+    </script>
+  </body>
+</html>

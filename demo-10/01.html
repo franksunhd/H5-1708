@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="main w">
+      <h1>登录</h1>
+      <div class="mainbox">
+        <form action="#" method="post">
+          <ul>
+            <li class="item">
+              用户名:
+            </li>
+            <li>
+              <input type="text" name="username" value="请输入您的账户名">
+            </li>
+            <li class="item">
+              登录密码:
+            </li>
+            <li>
+              <input type="password" name="passwd" value="请输入密码">
+            </li>
+            <li class="item">
+              确认密码:
+            </li>
+            <li>
+              <input type="password" name="Autopasswd" value="请再次输入密码">
+            </li>
+            <li class="item">
+              手机号码:
+            </li>
+            <li>
+              <input type="text" name="phone" value="请输入您的手机号码">
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $(function(){
+      var oldValue;
+      var text;
+
+      var xhr = xml
+      //文本类型
+      $("input:text").focus(function(){
+        oldValue = $(this).val();
+        if(oldValue==this.defaultValue)
+        {
+          $(this).val("");
+        }
+
+
+        // 失去焦点
+        $("input:text").blur(function(){
+          text = $(this).val();
+          if(!text){
+            // 为空
+            $(this).val(this.defaultValue);
+          }
+        });
+      });
+      //密码类型　的获得焦点的文本框,先把　密码类型　转换为　文本类型
+      $("input:password").attr("type","text").focus(function(){
+        $(this).attr("type","password");
+        oldValue = $(this).val();
+        if(oldValue==this.defaultValue)
+        {
+          $(this).val("");
+        }
+        // $(this).parent().next().css("visibility","visible");
+        // 失去焦点
+        $(this).blur(function(){
+          // $(this).parent().next().css("visibility","hidden");
+          var text = $(this).val();
+          if(text=="请输入密码" || text=="请再次输入密码"){
+            // 为默认
+            // console.log("111");
+            $(this).val(this.defaultValue).attr("type","text");
+          } else {
+            // 不为默认
+            $(this).attr("type","password");
+
+          }
+        });
+      });
+
+    });
+    </script>
+  </body>
+</html>

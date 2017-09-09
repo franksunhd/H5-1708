@@ -1,0 +1,48 @@
+
+$fontSize:10px;
+$navBg-Color:orange;
+$padding:20px !default;
+// selector
+.one1{
+  font-size: $fontSize;
+  &:hover{
+    background: $navBg-Color;
+  }
+  a {
+    text-decoration: none;
+    color: red;
+    &:hover{
+      color: green;
+    }
+  }
+  .one1_1{
+    padding: 0;
+  }
+}
+// values
+// $value:top;
+// .border-#{$value}{
+//   border-#{$value}:1px solid green;
+// }
+
+.main {
+  border: {
+    style:double;
+    top: {
+      color: green;
+    }
+    left: 12px;
+  }
+}
+
+.fakeshadow {
+  border: {
+    style: solid;
+    left: {
+      color: #888;
+    }
+    right: {
+      color: #ccc;
+    }
+  }
+}

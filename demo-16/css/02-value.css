@@ -1,0 +1,25 @@
+/*
+  value
+*/
+.bottom-top {
+  position: absolute;
+  top: 12px;
+}
+
+.main {
+  font-size: 12px;
+  color: red; }
+  .main:hover {
+    color: green;
+    background: pink; }
+
+.one {
+  font-size: 10px; }
+
+.one1 {
+  font-size: 25px; }
+
+.one2 {
+  font-size: 25px; }
+
+/*# sourceMappingURL=02-value.css.map */

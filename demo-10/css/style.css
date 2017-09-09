@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.w {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 50px;
+  background: orange;
+}
+
+.main > h1 {
+  text-align: center;
+}
+
+.main .mainbox {
+  width: 500px;
+  height: 400px;
+  margin: 20px auto;
+  background: red;
+}
+
+.main .mainbox ul {
+  width: 500px;
+}
+
+.main .mainbox ul li {
+  width: 346px;
+  height: 70px;
+  float: left;
+  font-size: 16px;
+  text-align: left;
+  line-height: 70px;
+  border: 1px solid;
+}
+
+.main .mainbox ul li input {
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  margin-left: 20px;
+  line-height: 30px;
+  font-size: 16px;
+  outline: none;
+  color: #666;
+  border: none;
+}
+
+.main .mainbox ul li.item {
+  width: 150px;
+  text-align: right;
+}

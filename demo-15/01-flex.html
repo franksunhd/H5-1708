@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no "/>    
+    <title>伸缩布局</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        border: 1px solid red;
+
+        /*flex在父元素上设置，表示子元素都变成可伸缩的*/
+        display: flex;
+      }
+
+      .f > .s {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      .f > .s:nth-child(1){
+        /*不扩展*/
+        flex-grow: 0;
+        /*不收缩*/
+        flex-shrink: 0;
+      }
+      .f > .s:nth-child(2){
+        flex-grow: 2;
+      }
+      .f > .s:nth-child(3){
+        flex-grow: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f">
+      <div class="s">1</div>
+      <div class="s">2</div>
+      <div class="s">3</div>
+    </div>
+  </body>
+</html>
