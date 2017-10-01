@@ -8,19 +8,21 @@ body {
   height: 100%;
   font-family: 'lucida grande', tahoma, verdana;
   background: #f2f2f2;
+  overflow: hidden;
 }
-.one {
+.Menu {
   width: 170px;
   height: 200px;
   position: absolute;
 }
 
-#myMenu{
-    position:relative;
-    background:#282c34;
-    display:none;
-    top: 10px;
-    left: 10px;
+#myMenu {
+  width: 100%;
+  position: relative;
+  background: #282c34;
+  display: none;
+  top: 10px;
+  left: 10px;
 }
 
 #myMenu li {

@@ -6,7 +6,7 @@
   <title>右键菜单</title>
   <link rel="stylesheet" href="../css/style.css"> </head>
 <body>
-<div class="one">
+<div class="Menu">
   <ul id="myMenu">
     <li>新建文件</li>
     <li>新建文件夹</li>
@@ -22,40 +22,67 @@
     // doucment是整个页面,鼠标右键事件调用contextmenu()方法
     // 调用show()用来显示Menu
 
+      var documentWidth = $(document).width();
+      var documentHeight = $(document).height();
+      var MenuWidth = $("#myMenu").width();
+      var MenuHeight = $("#myMenu").height();
+      var left = documentWidth - MenuWidth;
+      var tops = documentHeight - MenuHeight;
+
     $(document).contextmenu(function(e) {
+
       //取消点击动作的默认导航行为。
       e.preventDefault();
-
       //控制台打印右键单击位置
       console.log(e.pageX + "px" + e.pageY + "px");
 
-      $(".one #myMenu").css({
-        "display":"block",
-        "top": e.pageY + "px",
-        "left": e.pageX + "px"
-      });
+
+      // 获取当前距左边的间距
+      var leftMenu = e.pageX;
+      var topMenu = e.pageY;
+
+      if (leftMenu < left && topMenu < tops) {
+        $(".Menu #myMenu").css({
+          "display":"block",
+          "top": e.pageY + "px",
+          "left": e.pageX + "px"
+        });
+      }
+      else {
+        // 区域2
+        if (leftMenu >= left && topMenu < tops) {
+          $(".Menu #myMenu").css({
+            "display":"block",
+            "top": e.pageY + "px",
+            "left": left + "px"
+          });
+        }
+        // 区域3
+        if (leftMenu < left && topMenu >= tops) {
+          $(".Menu #myMenu").css({
+            "display":"block",
+            "top": tops + "px",
+            "left": e.pageX + "px"
+          });
+        }
+
+        // 区域4
+        if (leftMenu >= left && topMenu >= tops) {
+          $(".Menu #myMenu").css({
+            "display":"block",
+            "top": tops + "px",
+            "left": left + "px"
+          });
+        }
+      }
+
     });
 
     //调用鼠标单击事件，隐藏Menu
     $(document).click(function() {
       //hide()用来隐藏匹配元素
-      $(".one #myMenu").hide();
+      $(".Menu #myMenu").hide();
     });
-
-
-
-//     $(function() {
-//     $(document).on('contextmenu',function(e){
-//         $('#myMenu').show().css({
-//             'top':e.pageY+'px',
-//             'left':e.pageX+'px'
-//         });
-//         e.preventDefault();
-//     });
-//     $(window).click(function(){
-//         $('#myMenu').hide();
-//     })
-// });
   </script>
 </body>
 
