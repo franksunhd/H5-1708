@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>作用域</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    //作用域
+    /*
+    ECMA Script 5中的javascript只区分全局作用域和函数作用域，不是以花括号{}区分的。
+    */
+
+    if (true){
+      var a = 1;
+    }
+
+    console.log(a);//1
+
+
+    fun();  //
+
+    // 函数声明提升：会将函数的声明提 升到当前作用域的顶部
+    function fun(){
+      var f = 100;//局部变量
+      console.log(f);
+    }
+
+
+
+    function fun1(arg1,arg2) {
+      document.write(fun1.length);
+      document.write(arguments.length);
+      document.write(arguments[0]);
+      document.write(arguments[1]);
+    }
+
+    fun1(1,2);
+
+
+    </script>
+
+  </body>
+</html>

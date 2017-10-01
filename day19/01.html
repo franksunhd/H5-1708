@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var a = 10,  //Number
+    b = true,    //boolean
+    c = null,    //object
+    d = 'hello', //string
+    e;  //undefined
+
+
+    console.log(typeof a, typeof b, typeof c , typeof d  , typeof e);
+
+
+    console.log(f);//undefined
+    var f = 100;
+    console.log(f);//100
+
+    /*
+    变量声明提升:变量的定义在执行时会被提升到当前作用域的顶部，但是赋值的操作位置不变
+    */
+
+
+    console.log(parseInt("010", 8));
+    console.log(parseInt("10", 2));
+    console.log(parseInt("20",2));
+    console.log(parseInt("10", 10));
+    console.log(parseInt("10", 16));
+
+
+    console.log("parseInt('13')= "+ parseInt("13"));		//返回 13
+    console.log("parseInt('15',10)= "+ parseInt("15",10));	//返回 15
+    console.log("parseInt('11',2)= " + parseInt("11",2));	//返回 3
+    console.log("parseInt('17',8)= " + parseInt("17",8));	//返回 15
+    console.log("parseInt('1f',16)= " + parseInt("1f",16));	//返回 31
+    console.log("parseInt('010')= "+ parseInt("010"));		//返回 10
+
+
+    console.log("----parseFloat---------");
+    console.log(parseFloat("10.234")); //10.234
+    console.log(parseFloat("10.abc"));//10
+    console.log(parseFloat("10.23.4"));//10.23
+    console.log(parseFloat("0x10.234"));//0
+    console.log(parseFloat("010.234"));//10.234
+    console.log(parseFloat("abc"));//NaN
+
+    document.write(parseFloat("3.14"));
+    document.write(parseFloat("314e-2"));
+    document.write(parseFloat("0.0314E+2"));
+    document.write(parseFloat("3.14more non-digit characters")) ;
+
+
+
+
+    </script>
+
+  </body>
+</html>
