@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>节点删除，添加</title>
+    <style media="screen" >
+
+
+    *{
+      margin:0;
+      padding:0;
+    }
+    #div{
+      border:1px solid red;
+      width:400px;
+      height:50px;
+    }
+    #addDiv{
+      border:1px solid red;
+      width:400px;
+      height:50px;
+    }
+
+    #add{
+      width: 50px;
+      height:50px;
+      background: blue;
+      float: right;
+    }
+  </style>
+  </head>
+  <body>
+
+    <span style="font-size:18px;">
+      <div id="div">
+        <div id="addDiv">
+          <span>中国四大硬汉</span>
+          <span>别称</span>
+          <button id="add">添加</button>
+        </div>
+      </div>
+    </span>
+
+    <script type="text/javascript">
+
+    //当点击添加的时候创建div
+    window onload=function(){
+      var strAdd = document.getElementById("add");
+      var box = document.getElementById("div");
+      strAdd.onclick=addDiv;
+
+      //1.创建盒子节点
+      function addDiv(){
+      var newDiv = document.creatElement("div");
+      newDiv.stle.height="50px";
+      newDiv.style.background=green;
+      box.appendchild(newDiv);
+
+    //2.创建删除按钮
+    var delBtn = document.creatElement("div");
+    dalBtn.innerHTML = "删除"；
+    delBtn.style.width="50px";
+    delBtn.style.height="50px";
+    delBtn.style.background="pink";
+    dalBtn.float="right";
+    newDiv.appendchild(delBtn);
+
+    //3.点击删除的时候把当前盒子节点删除掉
+    delBtn.onclick=removeDiv;
+  }
+  function removeDiv(){
+    box.removechild(this.parentNode);
+  }
+}
+
+    </script>
+
+
+
+
+  </body>
+</html>

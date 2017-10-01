@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+
+    .box{
+      width:600px;
+      height:600px;
+
+      margin:0 auto;
+      /*display: flex;
+      justify-content: center;
+      align-items: center;*/
+      background: url("./clock/clock.jpg")
+      }
+
+    #hour,#minute,#second{
+    margin:0 auto;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+
+      <img src="./clock/hour.png" id="hour">
+      <img src="./clock/minute.png" id="minute">
+      <img src="./clock/second.png" id="second">
+    </div>
+    <script type="text/javascript">
+      var hour=document.getElementById('hour');
+      var min=document.getElementById('minute');
+      var sec=document.getElementById('second');
+      var timer=null;
+
+      function sport(){
+        var time=new Date();
+        sec.style.webkitTransform='rotate('+time.getSeconds()*6+'deg)';
+        min.style.webkitTransform = 'rotate(' + (time.getMinutes() + time.getSeconds() / 60) * 6 + 'deg)';
+       hour.style.WebkitTransform = 'rotate(' + (time.getHours() % 12 + time.getMinutes() / 60 + time.getSeconds() / 3600) * 30 + 'deg)';
+       console.log(sec.style.WebkitTransform);
+      }sport();
+      setInterval(sport,1000);
+    </script>
+
+
+
+  </body>
+</html>

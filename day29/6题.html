@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>发送一次数据请求</title>
+  </head>
+  <body>
+      <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      var xhr=new XMLHttpRquest();
+
+  function XMLHttpRquest(){
+    method:"post";
+    url:"/index",
+    data = {stus:[
+    {
+        "name":"lisi",
+        "age": 10,
+        "score": 88
+    },
+    {
+        "name":"zhangsan",
+        "age": 10,
+        "score": 88
+    },
+    {
+        "name":"zhaoliu",
+        "age": 10,
+        "score": 88
+    }]
+    },
+    success:function(data,textStatus,jqXHR){
+
+      console.log("recv from server:".data);
+        console.log("http status code:"+textStatus);
+        window.location="https://www.jd.com/";
+        error:function("jqxhr,textStatus,error "){
+          console.log(error);
+          console.log("http status code:"+textStatus);
+        }
+
+    });
+  });
+
+
+
+
+
+    </script>
+  </body>
+</html>

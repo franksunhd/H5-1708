@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>随机颜色</title>
+  </head>
+  <body>
+  <button type="button"id="btn1">第一</button>
+  <button type="button"id="btn2">第二</button>
+  <button type="button"id="btn3">第三</button>
+
+  <script type="text/javascript">
+    var btn1=document.getElementById('btn1');
+    btn1.onclick=function(){
+      document.body.style.background=bg1
+    };
+    btn2.onclick=function(){
+           document.body.style.background=bg2();
+       };
+       var btn3=document.getElementById('btn3');
+       btn3.onclick=function(){
+           document.body.style.background=bg3();
+       };
+    function bg1(){
+      return '#'+Math.floor(Math.random()*256.toString(10));
+    }
+    function bg2(){
+            return '#'+Math.floor(Math.random()*0xffffff).toString(16);
+        }
+    function bg3(){
+                 var r=Math.floor(Math.random()*256);
+                 var g=Math.floor(Math.random()*256);
+                 var b=Math.floor(Math.random()*256);
+                 return "rgb("+r+','+g+','+b+")";//所有方法的拼接都可以用ES6新特性`其他字符串{$变量名}`替换
+             }
+    </script>
+</body>
+</html>
