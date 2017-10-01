@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>输出100以内的质数</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var i;
+    var j;
+
+    // 输出100以内的质数，质数只能被1和本身整除
+      for (i = 2; i < 101; i++) {
+
+        for (j = 2; j < i; j++) {
+          if (i%j==0) {
+            break;
+          }
+        }
+
+        if (i==j) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>

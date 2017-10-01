@@ -1,0 +1,343 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.w {
+  width: 1920px;
+  margin: 0px auto;
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: none;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.header_bg {
+  height: 770px;
+  background-color: #E5AC3B;
+}
+
+.header_bg1 {
+  height: 770px;
+  margin: 0 auto;
+  background: url("../images/header_bg.png") no-repeat;
+  background-size: 1920px 770px;
+}
+
+.header_bg .header {
+  height:114px;
+}
+
+.header_bg .header .header-logo {
+  height: 114px;
+  float: left;
+}
+
+.header_bg .header .header-right {
+  height: 114px;
+  float: right;
+}
+
+.header_bg1 .header-nav {
+  height: 80px;
+  width: 100%;
+  background: url("../images/nav_bg.png") repeat-x;
+  background-size: 100% 80px;
+}
+.header_bg1 .header-nav ul>li {
+  line-height: 90px;
+  height: 80px;
+}
+
+.header_bg1 .header-nav ul>li>a {
+  color: #e04c5c;
+  margin-right: 50px;
+  margin-left: 20px;
+  display: block;
+}
+
+.header_bg1 .header-bannerbg {
+  width: 100%;
+  height: 578px;
+}
+
+.header_bg1 .header-bannerbg .header-banner {
+  width: 1920px;
+  height: 578px;
+  margin: 0px;
+  background: url("../images/banner_bg.png") no-repeat;
+}
+
+.youhuibg {
+  height: 111px;
+  background-color: #b4112e;
+}
+
+.youhui {
+  height: 111px;
+  margin: 0 auto;
+  background: url("../images/youhui.png") no-repeat;
+}
+
+.banner_bg {
+  width: 100%;
+  height:996px;
+  background:url("../images/banner-01_bg.png") repeat-x;
+  background-size: 1920px 996px;
+}
+
+.banner_bg .banner {
+  width: 1920px;
+  height: 996px;
+  background: url("../images/banner-01.png") no-repeat;
+  background-size: 1920px 996px;
+}
+
+.title-01-bg
+{
+  background-color: #ffdfe5;
+}
+
+.title-01 .top {
+  width: 1920px;
+  height: 311px;
+  background: url("../images/title-01.png") no-repeat;
+  background-size: 1250px 311px;
+}
+
+.title-01 .content {
+  height: 547px;
+}
+
+.title-01 .content .item:nth-child(1),
+.title-01 .content .item:nth-child(2),
+.title-01 .content .item:nth-child(3),
+.title-01 .content .item:nth-child(4),
+.title-01 .content .item:nth-child(5)
+{
+  height: 547px;
+  width: 329px;
+  float: left;
+  margin-right: 55px;
+}
+
+.title-01 .content .item:nth-child(1) {
+  background: url("../images/drink-01.png") no-repeat;
+}
+
+.title-01 .content .item:nth-child(2) {
+  background: url("../images/drink-02.png") no-repeat;
+}
+
+.title-01 .content .item:nth-child(3) {
+  background: url("../images/drink-03.png") no-repeat;
+}
+
+.title-01 .content .item:nth-child(4) {
+  background: url("../images/drink-01.png") no-repeat;
+}
+
+.title-01 .content .item:nth-child(5) {
+  background: url("../images/drink-02.png") no-repeat;
+}
+
+
+.title-02 .top {
+  width: 1850px;
+  height: 300px;
+  background: url("../images/title-02.png") no-repeat;
+  background-size: 1920px 300px;
+}
+
+.title-02 .center {
+  width: 1865px;
+  height: 753px;
+  background: url("../images/title-02-banner.png") no-repeat;
+  background-size: 1920px 753px;
+}
+
+.title-02 .content {
+  height: 547px;
+}
+
+.title-02 .content .item:nth-child(1),
+.title-02 .content .item:nth-child(2),
+.title-02 .content .item:nth-child(3),
+.title-02 .content .item:nth-child(4),
+.title-02 .content .item:nth-child(5)
+{
+  height: 547px;
+  width: 329px;
+  float: left;
+  margin-right: 55px;
+}
+
+.title-02 .content .item:nth-child(1) {
+  background: url("../images/drink-04.png") no-repeat;
+}
+
+.title-02 .content .item:nth-child(2) {
+  background: url("../images/drink-05.png") no-repeat;
+}
+
+.title-02 .content .item:nth-child(3) {
+  background: url("../images/drink-06.png") no-repeat;
+}
+
+.title-02 .content .item:nth-child(4) {
+  background: url("../images/drink-04.png") no-repeat;
+}
+
+.title-02 .content .item:nth-child(5) {
+  background: url("../images/drink-05.png") no-repeat;
+}
+
+.title-03-bg {
+  background-color: #c4fac0;
+}
+
+.title-03 .top {
+  width: 1850px;
+  height: 300px;
+  background: url("../images/title-03.png") no-repeat;
+  background-size: 1920px 300px;
+}
+
+.title-03 .center {
+  width: 1865px;
+  height: 753px;
+  background: url("../images/title-03-banner.png") no-repeat;
+  background-size: 1920px 753px;
+}
+
+.title-03 .content {
+  height: 547px;
+}
+
+.title-03 .content .item:nth-child(1),
+.title-03 .content .item:nth-child(2),
+.title-03 .content .item:nth-child(3),
+.title-03 .content .item:nth-child(4),
+.title-03 .content .item:nth-child(5)
+{
+  height: 547px;
+  width: 329px;
+  float: left;
+  margin-right: 55px;
+}
+
+.title-03 .content .item:nth-child(1) {
+  background: url("../images/drink-07.png") no-repeat;
+}
+
+.title-03 .content .item:nth-child(2) {
+  background: url("../images/drink-08.png") no-repeat;
+}
+
+.title-03 .content .item:nth-child(3) {
+  background: url("../images/drink-09.png") no-repeat;
+}
+
+.title-03 .content .item:nth-child(4) {
+  background: url("../images/drink-07.png") no-repeat;
+}
+
+.title-03 .content .item:nth-child(5) {
+  background: url("../images/drink-08.png") no-repeat;
+}
+
+
+.title-04-bg {
+  background-color: #b4fdf4;
+}
+
+.title-04 .top {
+  width: 1850px;
+  height: 300px;
+  background: url("../images/title-04.png") no-repeat;
+  background-size: 1920px 300px;
+}
+
+.title-04 .center {
+  width: 1865px;
+  height: 753px;
+  background: url("../images/title-04-banner.png") no-repeat;
+  background-size: 1920px 753px;
+}
+
+.title-04 .content {
+  height: 547px;
+}
+
+.title-04 .content .item:nth-child(1),
+.title-04 .content .item:nth-child(2),
+.title-04 .content .item:nth-child(3),
+.title-04 .content .item:nth-child(4),
+.title-04 .content .item:nth-child(5)
+{
+  height: 547px;
+  width: 329px;
+  float: left;
+  margin-right: 55px;
+}
+
+.title-04 .content .item:nth-child(1) {
+  background: url("../images/drink-10.png") no-repeat;
+}
+
+.title-04 .content .item:nth-child(2) {
+  background: url("../images/drink-11.png") no-repeat;
+}
+
+.title-04 .content .item:nth-child(3) {
+  background: url("../images/drink-12.png") no-repeat;
+}
+
+.title-04 .content .item:nth-child(4) {
+  background: url("../images/drink-10.png") no-repeat;
+}
+
+.title-04 .content .item:nth-child(5) {
+  background: url("../images/drink-11.png") no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************/

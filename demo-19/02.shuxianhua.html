@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>输出1000以内的水仙花数</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var bai , shi , ge , i , sum=0;
+
+    for (i = 100; i < 1000; i++) {
+
+        bai=parseInt(i/100);
+        shi=parseInt((i/10)%10);
+        ge=parseInt(i%10);
+
+        sum= Math.pow(bai,3)+ Math.pow(shi,3)+ Math.pow(ge,3);
+        if(sum==i)
+        {
+          console.log(i);
+        }
+    }
+    </script>
+  </body>
+</html>
