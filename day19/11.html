@@ -7,24 +7,26 @@
   <body>
     <script type="text/javascript">
     labelone: for (var i = 0; i < 10; i++) {
-      console.log("i=" + i);
+      document.write("<h3>i=" + i + "</h3>");
             if (i == 5){
               break labelone;
             }
-}
+    }
+
     function fun(arg1,arg2){
+
       return arg1 + arg2;
-      console.log("after return ...");//不会执行
+      document.write("<h3>after return ...</h3>");  //不会执行
       }
     var a = fun(1,2);//返回计算结果
-    console.log(a);  //3
+    document.write("<h3>a = fun(1,2) = "+ a +"</h3>");  //3
 
 
 
     fun1();      //undefined
 
     function fun1(arg1){
-      console.log(arg1);
+      document.write("<h3>arg1 = "+ arg1 +"</h3>");
       return;    //返回undefined
     }
     </script>

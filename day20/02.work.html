@@ -11,7 +11,7 @@
     //质数
     //封装一个函数，判断一个数是否是质数
     for (var  i = 2; i < 101; i++) {
-      //找1 ~ i
+      //找 2 ~ i
       for (var j = 2 ; j < i ; j++) {
         //i能被j整除
         if ( i % j == 0 ){
@@ -20,7 +20,7 @@
       }
 
       if (j == i){
-        console.log(i);
+        document.write("<h3>" + i + "</h3>");
       }
     }
 

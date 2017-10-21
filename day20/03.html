@@ -7,7 +7,7 @@
   <body>
 
     <script type="text/javascript">
-    var year = 2017, mon = 10, day = 10;
+    var year = 2017, mon = 3, day = 1;
     var leap = 0, sum = 0;
 
     if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
@@ -41,7 +41,7 @@
       sum += day;
     }
 
-    console.log(sum);
+    document.write("<h3>sum="+ sum + "</h3>");
     </script>
 
   </body>

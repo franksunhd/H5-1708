@@ -12,18 +12,18 @@
     out: for (var i = 0; i < 10; i++) {
       switch (i) {
         case 0:
-          console.log(0);
+          document.write("<h3> i = "+ i +"</h3>");
           break;
         case 1:
-          console.log(1);
+          document.write("<h3> i = "+ i +"</h3>");
           break;
         default:
-          console.log("******");
+          document.write("<h3>******</h3>");
           break out;
       }
     }
 
-    console.log("after for ....");
+    document.write("<h3>after for ....</h3>");
   </script>
 
 </body>
