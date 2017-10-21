@@ -26,15 +26,14 @@
       var year , month , day , sum , i;
       var months = [31,28,31,30,31,30,31,31,30,31,30,31];
 
+      // 点击测试按钮事件
       $("input[name=btn]").click(function(){
-
-
+        // 获取选中的三级菜单的 年月日 的值
         year = $("#Year > option:selected").val();
         month = $("#Month > option:selected").val();
         day = $("#Day > option:selected").val();
-        console.log(typeof day);
 
-
+        // 闰年二月 加1
         if( month > 2 && ((year%4==0 && year%100!=0) || year%400==0) ){
           sum = 1;
         }
@@ -57,8 +56,6 @@
 
       });
     });
-
-
 
     </script>
   </body>
