@@ -12,40 +12,59 @@
     .box{
       width:600px;
       height:600px;
-
       margin:0 auto;
-      /*display: flex;
-      justify-content: center;
-      align-items: center;*/
-      background: url("./clock/clock.jpg")
+      background: url("./clock/clock.jpg") no-repeat;
+      position: relative;
       }
 
-    #hour,#minute,#second{
-    margin:0 auto;
+    #hour,
+    #minute,
+    #second {
+    margin: 0 auto;
+    }
+
+    #hour {
+      position: absolute;
+      top: 0px;
+      left: 270px;
+    }
+
+    #minute {
+      position: absolute;
+      top: 0px;
+      left: 270px;
+    }
+
+    #second {
+      position: absolute;
+      top: 0px;
+      left: 280px;
     }
 
     </style>
   </head>
   <body>
     <div class="box">
-
       <img src="./clock/hour.png" id="hour">
       <img src="./clock/minute.png" id="minute">
       <img src="./clock/second.png" id="second">
     </div>
     <script type="text/javascript">
-      var hour=document.getElementById('hour');
-      var min=document.getElementById('minute');
-      var sec=document.getElementById('second');
-      var timer=null;
+      var hour = document.getElementById('hour');
+      var min = document.getElementById('minute');
+      var sec = document.getElementById('second');
+      var timer = null;
 
       function sport(){
-        var time=new Date();
+        var time = new Date();
         sec.style.webkitTransform='rotate('+time.getSeconds()*6+'deg)';
         min.style.webkitTransform = 'rotate(' + (time.getMinutes() + time.getSeconds() / 60) * 6 + 'deg)';
-       hour.style.WebkitTransform = 'rotate(' + (time.getHours() % 12 + time.getMinutes() / 60 + time.getSeconds() / 3600) * 30 + 'deg)';
-       console.log(sec.style.WebkitTransform);
-      }sport();
+        hour.style.WebkitTransform = 'rotate(' + (time.getHours() % 12 + time.getMinutes() / 60 + time.getSeconds() / 3600) * 30 + 'deg)';
+        console.log(sec.style.WebkitTransform);
+      }
+
+      sport();
+      // 超时定时器
       setInterval(sport,1000);
     </script>
 

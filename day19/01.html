@@ -17,8 +17,8 @@
 
     console.log(typeof a, typeof b, typeof c , typeof d  , typeof e);
 
-
-    console.log(f);//undefined
+    // f 未定义就引用
+    console.log(f); //undefined
     var f = 100;
     console.log(f);//100
 
@@ -27,11 +27,11 @@
     */
 
 
-    console.log(parseInt("010", 8));
-    console.log(parseInt("10", 2));
-    console.log(parseInt("20",2));
-    console.log(parseInt("10", 10));
-    console.log(parseInt("10", 16));
+    console.log(parseInt("010", 8)); // 8
+    console.log(parseInt("10", 2));  //2
+    console.log(parseInt("20",2));    //NaN
+    console.log(parseInt("10", 10));  // 10
+    console.log(parseInt("10", 16));  // 16
 
 
     console.log("parseInt('13')= "+ parseInt("13"));		//返回 13
@@ -50,10 +50,10 @@
     console.log(parseFloat("010.234"));//10.234
     console.log(parseFloat("abc"));//NaN
 
-    document.write(parseFloat("3.14"));
-    document.write(parseFloat("314e-2"));
-    document.write(parseFloat("0.0314E+2"));
-    document.write(parseFloat("3.14more non-digit characters")) ;
+    document.write(parseFloat("3.14") + "<br>");
+    document.write(parseFloat("314e-2") + "<br>");
+    document.write(parseFloat("0.0314E+2") + "<br>");
+    document.write(parseFloat("3.14more non-digit characters") + "<br>") ;
 
     </script>
 
