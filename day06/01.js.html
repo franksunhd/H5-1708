@@ -16,8 +16,11 @@
      console.log(10 * "10");//100
 
     //隐式转换
+    // isNaN()  Not a Number 不是数值 返回 true 是数值 返回 false
+     
     console.log(isNaN(""));//false,将字符串变为0
-    console.log(isNaN("hello"));//true
+    console.log(isNaN(undefined));//true
+    console.log(isNaN("undefined"));//true
 
     console.log(Boolean(NaN));//false
 

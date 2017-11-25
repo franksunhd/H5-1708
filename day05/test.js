@@ -1,1 +1,1 @@
-console.log("外部js文件！！！！");
+document.write("外部js文件！！！！");

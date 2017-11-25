@@ -63,13 +63,18 @@
 
   <table id="list">
     <caption><h1>学生信息</h1></caption>
-    <tr class="black_s">
-      <th>id</th>
-      <th>name</th>
-      <th>gender</th>
-      <th>age</th>
-      <th>remark</th>
-    </tr>
+    <thead>
+      <tr class="black_s">
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+        <th>remark</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
   </table>
   </div>
   <script type="text/javascript">
@@ -79,16 +84,21 @@
     var trr;
     var i=0;
     add.click(function(){
-      trr = "<tr id=" +'"'+ i +'"'+ "><td>"+ i +"</td><td>1</td><td>1</td><td>1</td><td><button id=" +'"'+ i +'"'+ ">删除</button></td></tr>";
+      trr = "<tr id=" +'"'+ i +'"'+ "><td>"+ i +"</td><td>1</td><td>1</td><td>1</td><td>删除</td></tr>";
       console.log(trr);
       $(trr).addClass("black td").appendTo("#list");
       i++;
+
+      $("#list tbody tr td:last").css("cursor","pointer");
+
+      $("#list tbody tr td:last").click(function(){
+        $(this).parent().remove();
+      });
     });
+
     var del = $(".btn button").eq(1);
     del.click(function(){
-      // console.log("1");
-      // alert($(this).eq(i).attr("id"));
-      $("#list .black:last").remove();
+      $("#list tbody").empty();
     });
   </script>
 </body>

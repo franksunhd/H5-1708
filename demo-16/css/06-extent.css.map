@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,CAAG;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;;AAEZ,cAAG;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,GAAG;;AAMZ,UAAK;EACH,WAAW,EAAE,KAAK;EAClB,UAAU,EAAE,MAAM;;AAIpB,IAAK;EAGH,UAAU,EAAE,KAAK",
-"sources": ["../scss/06-extent.scss"],
-"names": [],
-"file": "06-extent.css"
-}

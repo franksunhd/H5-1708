@@ -22,14 +22,14 @@
     // doucment是整个页面,鼠标右键事件调用contextmenu()方法
     // 调用show()用来显示Menu
 
+    $(document).contextmenu(function(e) {
+
       var documentWidth = $(document).width();
       var documentHeight = $(document).height();
       var MenuWidth = $("#myMenu").width();
       var MenuHeight = $("#myMenu").height();
       var left = documentWidth - MenuWidth;
       var tops = documentHeight - MenuHeight;
-
-    $(document).contextmenu(function(e) {
 
       //取消点击动作的默认导航行为。
       e.preventDefault();
@@ -41,6 +41,7 @@
       var leftMenu = e.pageX;
       var topMenu = e.pageY;
 
+      // 区域 1
       if (leftMenu < left && topMenu < tops) {
         $(".Menu #myMenu").css({
           "display":"block",

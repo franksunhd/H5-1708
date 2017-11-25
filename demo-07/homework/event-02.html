@@ -16,10 +16,10 @@
         <thead>
           <tr>
             <th>ID号</th>
-            <th>NAME</th>
-            <th>AGE</th>
-            <th>GENDER</th>
-            <th>REMARK</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>删除</th>
           </tr>
         </thead>
         <tbody>
@@ -36,12 +36,12 @@
     var trr;
     var age = 18;
     add.click(function(){
-      trr = "<tr><td>"+ age +"</td><td>张三</td></td><td>" + age + "</td><td>女</td><td><button>删除</button></td></tr>";
+      trr = "<tr><td>"+ age +"</td><td>张三</td></td><td>" + age + "</td><td>女</td><td>删除</td></tr>";
       age++;
       $(".list tbody").append(trr);
 
-      $(".list tbody td:last button").click(function(){
-        $(".list tbody tr td:last").parent().remove();
+      $(".list tbody td:last").click(function(){
+        $(this).parent().remove();
       });
     });
 
