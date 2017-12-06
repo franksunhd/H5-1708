@@ -20,7 +20,7 @@
     2. 动态生成数据(根据参数变化)
     */
 
-    /*
+
     function fun() {
       //计数功能
       var count = 0;
@@ -41,14 +41,18 @@
     }
 
     var result = fun();
-    var add = result[0];
-    var min = result[1];
-    var get = result[2];
+    // var add = result[0];
+    // var min = result[1];
+    // var get = result[2];
+    //
+    // add();
+    // min();
+    // console.log(get());
 
-    add();
-    min();
-    console.log(get());
-    */
+    // 等价于
+    result[0]();    // add
+    result[1]();    // min
+    console.log(result[2]());
 
 
     function fun2(str){
@@ -62,7 +66,7 @@
     box.innerHTML += ret("h2");
     box.innerHTML += ret("h3");
 
-     ret = fun2("worldhello");
+    ret = fun2("worldhello");
     box.innerHTML += ret("h4");
 
   </script>

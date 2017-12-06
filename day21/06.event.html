@@ -37,23 +37,23 @@
     */
     btn1.addEventListener('click', function(){
       console.log("%cbtn1被单击xxxx", "color:red;font-size: 40px");
-    },false);
+    },true);
 
 
     btn1.addEventListener('click', function(){
       console.log("%cbtn1被单击yyyy", "color:red;font-size: 40px");
-    },false);
+    },true);
 
 
     box.addEventListener('click', function(){
       console.log("%cbox 不知道被谁单击", "color:red;font-size: 40px");
-    },false);
+    },true);
 
 
     // // document就是整个页面
     document.addEventListener('click', function(){
-      console.log("%c document 不知道被谁单击", "color:red;font-size: 40px");
-    },false);
+      console.log("%cdocument 不知道被谁单击", "color:red;font-size: 40px");
+    },true);
 
     /*
     事件处理的三个阶段：
@@ -63,10 +63,8 @@
 
     addEventListener最后一个参数：
     false, 事件到冒泡阶段，事件会向外传递
-    true, 事件到捕获阶段，事件由外向里传递
+    true,  事件到捕获阶段，事件由外向里传递
     */
-
-
 
     </script>
 
