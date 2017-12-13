@@ -59,7 +59,7 @@
     window.onscroll = function () {
       var temp = getScrollValue();
       console.log("垂直滚动了: ", temp.top);
-      // console.log("水平滚动了: ", temp.left);
+      console.log("水平滚动了: ", temp.left);
 
       if (temp.top >= 666) {
         $(goTop).show();
@@ -84,7 +84,7 @@
           clearInterval(timer);
         }
         window.scrollTo(0, current);
-      }, 20);
+      }, 50);
 
     };
 

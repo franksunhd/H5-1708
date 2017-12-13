@@ -25,7 +25,6 @@
     //2. 获得画布的上下文对象
     var cxt = can.getContext("2d");
 
-
     //drawImage绘制图片
 
     var img = document.getElementById("img");
@@ -34,17 +33,17 @@
     img.onload = function () {
 
       //绘制图片时，一定要保证图片加载完毕
+
+      // img x y
       cxt.drawImage(img, 100, 100);
 
+      // img x y width height
       cxt.drawImage(img, 0, 0, 100, 100);
 
-
+      // img sx sy swidth sheight x y width height
       cxt.drawImage(img, 57, 96, 97, 97, 350, 350, 45, 45);
     }
 
   </script>
-
-
 </body>
-
 </html>

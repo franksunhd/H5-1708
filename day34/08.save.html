@@ -20,6 +20,7 @@
 
     cxt.lineWidth = 5;
     cxt.strokeRect(0, 0, 100, 100);
+    // 保存当前画布状态
     cxt.save();
 
     cxt.scale(2, 2);
@@ -35,15 +36,15 @@
     cxt.save();
 
     //开始恢复(倒序恢复，类似于栈，最先恢复是最后一次的save)
+    // 恢复保存的画布状态
     cxt.restore();
     cxt.restore();
     cxt.restore();
     cxt.restore();
+
     cxt.strokeStyle = "red"
     cxt.strokeRect(0, 0, 50, 50);
 
   </script>
-
 </body>
-
 </html>

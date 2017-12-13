@@ -40,7 +40,6 @@
       <li></li>
       <li></li>
       <li></li>
-      <p>快睡觉看后感看见好看</p>
     </ul>
 
     <script src="./jquery-3.0.0.js" charset="utf-8"></script>
@@ -51,15 +50,11 @@
 
     var lis = $("#points li");
 
-    for (var i = 0; i < lis.length; i++) {
-      lis.eq(i).on('click', i, function (event){
+    for (var i = 0,len = lis.length; i < len; i++) {
+      lis.eq(i).on('click', function (event){
         $(this).addClass("current").siblings("li").removeClass("current");
       });
     }
-
-
-
-
     </script>
   </body>
 </html>

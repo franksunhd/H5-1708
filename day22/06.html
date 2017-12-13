@@ -7,7 +7,11 @@
   <body>
 
     <div>
-      <div id="one">one</div>xxxx<div>two</div>
+      <div id="one">
+      one
+      </div>
+      xxxx
+      <div>two</div>
       <p>three</p>
     </div>
 
@@ -38,7 +42,7 @@
     nextSibling  将文本节点也识别为兄弟
     nextElementSibling 只将标签识别为兄弟
     */
-    console.log(one.nextSibling.nodeType);//3
+    console.log(one.nextSibling.nodeType); // 文本节点类型是 3
     console.log(one.nextElementSibling.nextElementSibling);
 
     console.log(one.previousSibling);
@@ -61,7 +65,6 @@
     var three = document.getElementById("three");
     console.log(three.childNodes);
     console.log(three.children);
-
     
     </script>
   </body>

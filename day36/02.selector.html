@@ -18,13 +18,14 @@
       <li>666</li>
     </ul>
 
-    <input type="text" name="text">
-    <input type="number" name="number">
+    <input type="text" name="text" placeholder="请输入用户名"> <br><br>
+    <input type="number" name="number" placeholder="输入数字">
 
     <script type="text/javascript">
 
     //querySelector只能选中第一个符合条件的
     var list = document.querySelector("ul.list");
+    console.log(list);
     console.log(document.querySelectorAll("ul.list > li:nth-child(2)"));
     console.log(document.querySelector("input[type=text]"));
     </script>

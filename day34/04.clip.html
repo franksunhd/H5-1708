@@ -19,18 +19,17 @@
     cxt.beginPath();
     cxt.strokeStyle = "lightblue";
     cxt.lineWidth = 5;
+
+    // arc  x y 半径 角度 弧度 顺时针
     cxt.arc(100, 100, 100, 0, Math.PI * 2, false);
     cxt.stroke();
 
 
     //按照以上形状进行裁剪,裁剪之后只有该区域可以绘制图形
     cxt.clip();
+    // 绘制填充矩形
     cxt.fillRect(10, 10, 100, 100);//不一定能看得到
 
-
-
-
     </script>
-
   </body>
 </html>

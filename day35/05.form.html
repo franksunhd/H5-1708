@@ -9,7 +9,7 @@
 
     <!-- novalidate控制是否进行数据校验，默认是开启的 -->
     <!-- autocomplete决定了 是否开启自动完成的功能  -->
-    <form  action="#" method="get"  autocomplete="off">
+    <form  action="#" method="get"  autocomplete="off" novalidate="true">
 
       <!-- pattern是正则表达式，可以用于进行校验  -->
       正则表达式校验: <input  id="text" type="text" pattern="\d+"> <br><br>
@@ -30,8 +30,8 @@
       url: <input type="url" name="url"  required>  <br>
 
       number: <input type="number" name="number"  min="20" max="100" step="2"> <br>
-      range: <input type="range" name="range"  value="0.5" min="0" max="1" step="0.1"> <br>
 
+      range: <input type="range" name="range"  value="0.5" min="0" max="1" step="0.1"> <br>
       <!-- autofocus 自动获得焦点  -->
       search: <input type="search"  autofocus> <br>
 

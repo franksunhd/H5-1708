@@ -40,10 +40,9 @@
         console.log("event.which", event.which);
       };
 
-
       //右键
       document.oncontextmenu = function (event) {
-        // console.log(event.button);
+        console.log(event.button);
         event.stopPropagation();
         event.preventDefault();
       };

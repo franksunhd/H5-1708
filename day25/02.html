@@ -11,13 +11,17 @@
 
       //判断是否回文？？？
       function isPlaindrom(str){
+        // split 转为为 数组
         var newStr = str.split('');
+        console.log(newStr);
+        // join 方法转化为字符串
         return str === (newStr.reverse().join(''));
       }
-      
+
       console.log(isPlaindrom(str));
 
-
+      var atr = ['a','v','f'];
+      console.log(atr.join('#'));
     </script>
 
   </body>

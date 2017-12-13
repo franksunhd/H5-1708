@@ -12,9 +12,9 @@
     -->
     <audio controls  loop>
       <!-- source用于指定音频，按照顺序，直到找到一个支持的格式为止  -->
-      <source src="./music1.ogg">
-      <source src="./12306.wav">
-      <source src="./music1.mp3">
+      <source src="./video/music1.ogg">
+      <source src="./video/12306.wav">
+      <source src="./video/music1.mp3">
     </audio>
 
     <hr>
@@ -22,7 +22,7 @@
     <!--.
     poster属性用于给视频指定封面
     -->
-    <video  id="video-1" width="500" height="300" controls poster="./poster.jpg">
+    <video  id="video-1" width="500" height="300" controls poster="./video/poster.jpg">
       <source src="./video/chrome.ogv">
       <source src="./video/fun.mp4">
     </video>
@@ -50,15 +50,9 @@
    //loadedmetadata, 事件在元信息加载完毕之后触发
    v.addEventListener('loadedmetadata', function(){
      console.log("视频元信息加载完毕！");
-     console.log("视频总长为 %ds！", v.duration);
-
+     console.log("视频总长为 %ds!", v.duration);
    },false);
-
-
-
+   
    </script>
-
-
-
   </body>
 </html>

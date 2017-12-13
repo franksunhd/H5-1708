@@ -65,10 +65,10 @@
     console.log(box.clientWidth); // 240, 只读属性
 
 
-    //获取  width
+    //获取 width
     var styles = window.getComputedStyle(box);
-    console.log(parseInt(styles.width));
-    console.log(styles.border);
+    console.log(parseInt(styles.width));  // 200
+    console.log(styles.border);  // 10px solid rgb(255, 0, 0);
 
 
 
@@ -83,18 +83,6 @@
 
 
     console.log("box.offsetParent = ", box.offsetParent);
-
-
-
-
-
-
-
-
-
-
-
-
 
   </script>
 </body>

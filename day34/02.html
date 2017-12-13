@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title></title>
 </head>
-
 <body>
-
-
   <canvas id="canvas">你的浏览器不支持canvas</canvas>
 
   <script type="text/javascript">
@@ -25,8 +21,8 @@
     var cxt = can.getContext("2d");
 
 
-    // cxt.strokeStyle = "yellow";
-    cxt.fillStyle = "yellow";
+    cxt.strokeStyle = "yellow";
+    cxt.fillStyle = "pink";
     cxt.arc(250, 250, 100, 0, Math.PI * 2, false);
     cxt.fill();
 
@@ -34,16 +30,19 @@
     //绘制扇形
     cxt.beginPath();
     cxt.moveTo(0, 0);
-    cxt.arc(0, 0, 100, 0, Math.PI * 0.5, false);
+    // cxt.arc(x,y,半径,从0度开始,绘制角度,顺时针);
+    cxt.arc(0,0,100, 0, Math.PI * 0.5, false);
     cxt.fill();
 
-
+    // 横线
     cxt.beginPath();
     cxt.moveTo(200, 0);
     cxt.lineTo(200, 500);
 
+    // 竖线
     cxt.moveTo(0, 200);
     cxt.lineTo(500, 200);
+    // 描边
     cxt.stroke();
 
     cxt.beginPath();
@@ -55,11 +54,10 @@
     cxt.textAlign = "center";
 
     //设置文本垂直的对齐
-    cxt.textBaseline = "middle"; 
+    cxt.textBaseline = "middle";
 
     cxt.fillText("我喜欢钱", 200, 200);
-    cxt.strokeText("我喜欢钱", 200, 300);
-
+    cxt.strokeText("你喜欢谁", 200, 300);
 
   </script>
 

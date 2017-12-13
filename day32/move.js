@@ -30,6 +30,10 @@ function linearMove (elem, target, step, interval) {
       box.style.left = target +  "px";
       clearInterval(elem.timer);
     }
+
+    if (box.offsetLeft <= 0) {
+      clearInterval(elem.timer)
+    }
   }, interval);
 
 }

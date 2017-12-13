@@ -17,8 +17,6 @@
 
     <script type="text/javascript">
       var box = document.getElementById("box");
-
-
       // 特性(直接写在开始标签中，比如：id,name,class)的操作
 
       //获得指定的特性值,可以利用自定义特性来在标签上存储数据
@@ -34,7 +32,7 @@
 
 
       //删除特性
-      // box.removeAttribute('name');
+      box.removeAttribute('name');
 
 
       /*
@@ -43,20 +41,20 @@
 
       console.log("*****************属性********************");
       console.log(box.id);//id,属性和特性一样
-      console.log(box.name);//没有该属性
+      console.log(box.name);//undefined
       console.log(box.class);//undefined
       console.log(box.className);//类名
       box.className += " vs3";
 
 
       //通过属性来设置样式style
-
+      // box.style.width = 200 + "px";
+      // box.style.height = 300 + "px";
+      // box.style.backgroundColor = "red";
       //通过style无法获得用css样式表设置的属性
       console.log(box.style.width);
       console.log(box.style.height);
       console.log(box.style.backgroundColor);
-
-
     </script>
 
   </body>

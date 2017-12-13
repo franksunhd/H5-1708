@@ -18,6 +18,7 @@
       // 使用或运算或者条件判断来 实现event的兼容
       var event = event || window.event;
       console.log(event.target || event.srcElement);
+      // 停止事件传递
       event.stopPropagation ? event.stopPropagation() : event.cancelBubblue = true;
     }
 

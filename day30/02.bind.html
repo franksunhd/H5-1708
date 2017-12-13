@@ -8,24 +8,24 @@
 
     <script type="text/javascript">
 
-    function handler(){
-      console.log(this);
+
+    function handler(arg1,arg2){
+      console.log(this.value);
       console.log(arguments);
     }
 
-    var obj = {value: 100};
+    var value = 10;
+
+    var obj = {
+      value: 100
+    };
 
 
     //给函数bind一个指定的this，但是返回的函数是绑定成功的，不会影响原函数
     var newFun = handler.bind(obj, 10,20);
 
-    // handler();
-    newFun(30,40);
-
-
-
-
-
+    handler();   // 10 arguments[0]
+    newFun(30,40);  // 100 arguments[4]
     </script>
 
   </body>

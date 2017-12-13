@@ -55,7 +55,7 @@
       for (var i = 0; i < f.files.length; i++) {
         console.log(f.files[i].name);
         var tr = document.createElement("tr");
-        tr.innerHTML = "<td>" + f.files[i].name + "</td><td>" + f.files[i].size/1024 + "KB</td><td>" + f.files[i].lastModifiedDate + "</td>";
+        tr.innerHTML = "<td>" + f.files[i].name + "</td><td>" + f.files[i].size/1024 + "KB</td><td>" + f.files[i].lastModifiedDate.toLocaleDateString() + "</td>";
         tb.appendChild(tr);
       }
 

@@ -18,7 +18,7 @@
   </head>
   <body>
   <caption><button id="addbtn">添加一行</button></caption>
-    <table border="1" cellspacing="1" cellpadding="30">
+    <table border="1" cellspacing="0" cellpadding="50">
 
     <thead id="thead">
           <th>name</th>
@@ -41,15 +41,13 @@
     tr.innerHTML="<td>杨帆</td> <td>杨帆</td> <td>杨帆</td> <td><a href='#' onclick='remove(this)'>删除</a></td>";
     mid.appendChild(tr);
   },false)
-  //remove(this)实参，this此处指的是<a>本身
+  // remove(this);  //实参，this此处指的是<a>本身
 
   //obj形参
   function remove(obj){
-  var tr=obj.parentNode.parentNode;
+  var tr=obj.parentNode.parentNode; // tr
   mid.removeChild(tr);
  }
-
-
 
   </script>
 
