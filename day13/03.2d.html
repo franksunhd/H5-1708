@@ -17,11 +17,11 @@
         /*
         translate属于标准流,相对于自身移动
         */
-        /*transform: translateX(50px) translateY(50px);*/
+        transform: translateX(50px) translateY(50px);
         /*transform: translate(50px,50px);*/
 
         /*此处的百分比是相对于自身*/
-        transform: translate(-50%,50%);
+        /*transform: translate(-50%,50%);*/
       }
 
 
@@ -32,14 +32,16 @@
         height: 200px;
         background: blue;
         margin: 50px;
-        transition: all 2s;
+        transition: all 2s linear;
       }
 
       .two:hover {
+        /* 缩放 横向扩大2倍 纵向缩放1倍 */
         transform: scale(2,0.5);
       }
 
       .three:hover {
+        /* 顺时针 旋转 45deg */
         transform: rotate(45deg);
       }
 
@@ -48,7 +50,7 @@
         /*
         倾斜
         */
-        transform: skew(30deg, 30deg);
+        transform: skewX(30deg) ;
       }
 
     </style>
