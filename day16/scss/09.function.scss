@@ -1,7 +1,7 @@
 //function
 
 
-//define
+// define
 @function toPx($value){
   @return $value * 10px;
 }
