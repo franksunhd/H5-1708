@@ -13,34 +13,32 @@
 
     // 1. 直接定义 ，使用 “/xxxx/”
     var pat = /\d{1,4}/g;
-    console.log(typeof pat);
+    console.log(typeof pat,pat);  // object /\d{1,4}/g
 
     // 2. 使用new 产生
     var pat2 = new RegExp(/\d{1,4}/, 'g');
     var pat3 = new RegExp('\d{1,4}', 'g');
-    console.log(pat2, pat3);
+    console.log(pat2, pat3);  // /\d{1,4}/g /d{1,4}/g
 
 
 
     var str = "helloworldgoogle";
 
     //test方法就是测试是否匹配
-    console.log(/world/g.test(str)); //
-    console.log(/hehe/g.test(str)); //
+    console.log(/world/g.test(str)); // true
+    console.log(/hehe/g.test(str)); // false
 
     console.log(/\d{3,4}/.test("11abckdjkgjkgj")); //false
     console.log(/\d{3,4}/.test("123abckdjkgjkgj")); //true
     console.log(/\d{3,4}/.test("1234abckdjkgjkgj")); //true
     console.log(/\d{3,4}/.test("1234748747475abckdjkgjkgj")); //true
 
-
-
-    console.log("特殊符号----------------------》");
+    console.log("特殊符号----------------------");
     //关键部分,特殊符号
 
-    console.log(/./.test("helloworld"));
-    console.log(/./.test("123"));
-    console.log(/./.test("~&#"));
+    console.log(/./.test("helloworld")); // true
+    console.log(/./.test("123"));  // true
+    console.log(/./.test("~&#"));  // true
 
 
     //  '\' 转义字符，不是本身含义， 拥有了特殊含义
@@ -80,9 +78,9 @@
 
 
     //边界匹配， ^ $
-    console.log(/^helloworld/.test("xxxhelloworldyyy"));
-    console.log(/^helloworld/.test("helloworldyyy"));
-
+    console.log(/^helloworld/.test("xxxhelloworldyyy"));  // false 
+    console.log(/^helloworld/.test("helloworldyyy"));  //  true
+ 
     console.log(/helloworld$/.test("xxxxhelloworldyyy"));//false
     console.log(/helloworld$/.test("xxxxhelloworld"));//true
 
@@ -97,7 +95,7 @@
     console.log(/^a*$/.test(""));//true
     console.log(/^a*$/.test("aaaaaa"));//true
     console.log(/^a*$/.test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));//true
-    console.log(/^(ab)*$/.test("abababab"));//
+    console.log(/^(ab)*$/.test("abababab"));// true
 
 
     // +: +前边的字符出现 >= 1 次数
@@ -124,16 +122,6 @@
     console.log(/^hello|world$/.test("world"));//true
     console.log(/^hello|world$/.test("helloworld"));//true
     console.log(/^hello|world$/.test("hellokjgkkj"));//true
-
-
-
-
-
-
-
-
-
-
 
   </script>
 
